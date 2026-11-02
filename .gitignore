@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+test-results/
+playwright-report/
+tmp/
+.DS_Store
+docs/publishing-notes.md
+docs/design/*.png
+docs/qa/

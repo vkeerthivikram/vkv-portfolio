@@ -1,0 +1,12 @@
+node_modules
+.git
+docs
+tests
+test-results
+playwright-report
+tmp
+.env*
+public/images/*.jpg
+public/images/ballnote-light.png
+public/images/ballnote-dark.png
+public/images/taskly-desktop.png
