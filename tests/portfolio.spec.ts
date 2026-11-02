@@ -33,7 +33,7 @@ test("introduces the developer and connects every navigation link to a real sect
 }) => {
   await expect(page).toHaveTitle(/V Keerthi Vikram/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-    "Curiosity in.Useful softwareout.",
+    "V Keerthi Vikram",
   );
   const navigation = page.getByRole("navigation", { name: "Main navigation" });
   await navigation
@@ -143,10 +143,10 @@ test("explains unfinished work honestly and supports keyboard dialog dismissal a
   const dialog = page.getByRole("dialog", { name: "Passage" });
   await expect(dialog).toBeVisible();
   await expect(
-    dialog.getByText("Paused development checkpoint", { exact: true }),
+    dialog.getByText("Development paused", { exact: true }),
   ).toBeVisible();
   await expect(
-    dialog.getByText(/unfinished source code, not a tested release/),
+    dialog.getByText(/There is no tested release yet/),
   ).toBeVisible();
   await expect(
     dialog.getByRole("link", { name: "View on GitHub" }),

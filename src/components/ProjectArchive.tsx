@@ -86,8 +86,8 @@ export default function ProjectArchive() {
     <section className="archive" id="projects" aria-labelledby="archive-title">
       <div className="container">
         <div className="archive-heading">
-          <h2 id="archive-title">The full collection</h2>
-          <p>Apps, tools, themes, and works in progress.</p>
+          <h2 id="archive-title">All projects</h2>
+          <p>Apps, tools, themes, and work in progress.</p>
         </div>
 
         <div className="archive-controls">
@@ -246,8 +246,8 @@ export default function ProjectArchive() {
               </ul>
               <h3>
                 {selectedProject.category === "Experiments"
-                  ? "The direction"
-                  : "Inside the project"}
+                  ? "Planned features"
+                  : "Features"}
               </h3>
               <ul className="project-dialog-features">
                 {selectedProject.features.map((feature) => (

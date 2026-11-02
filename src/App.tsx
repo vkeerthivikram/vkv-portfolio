@@ -24,7 +24,7 @@ export default function App() {
           <a href="#projects">All projects</a>
           <a href="#about">About</a>
           <a className="nav-contact" href="#contact">
-            Let’s talk <ArrowUpRight aria-hidden size={18} />
+            Contact <ArrowUpRight aria-hidden size={18} />
           </a>
           <ThemeToggle />
         </nav>
@@ -33,19 +33,18 @@ export default function App() {
         <section className="hero container" aria-labelledby="intro-heading">
           <div className="hero-copy">
             <h1 id="intro-heading">
-              Curiosity in.
+              V Keerthi{" "}
               <br />
-              Useful software
-              <br />
-              <span>out.</span>
+              <span>Vikram</span>
             </h1>
             <p>
-              I’m V Keerthi Vikram. I build apps, developer tools, and small
-              experiments that make everyday things a little better.
+              I build apps, developer tools, and themes. My projects include an
+              offline cricket scorer, a single-file task manager, and a Git
+              terminal interface.
             </p>
             <div className="hero-actions">
               <a className="button" href="#work">
-                Explore my work <ArrowDown size={20} aria-hidden />
+                View projects <ArrowDown size={20} aria-hidden />
               </a>
               <a
                 className="text-link"
@@ -66,7 +65,6 @@ export default function App() {
               height="900"
               fetchPriority="high"
             />
-            <figcaption>Independent projects. Openly shared.</figcaption>
           </figure>
         </section>
         <SelectedWork />
@@ -76,28 +74,18 @@ export default function App() {
           id="about"
           aria-labelledby="about-heading"
         >
-          <h2 id="about-heading">
-            A practical streak.
-            <br />
-            An open mind.
-          </h2>
+          <h2 id="about-heading">About me</h2>
           <div className="about-copy">
             <p className="lead">
-              I’m V Keerthi Vikram, a developer who likes turning small
-              frustrations into useful software.
+              I’m a software developer. I work on Android apps, web apps, and
+              tools for the terminal and Linux desktop.
             </p>
             <p>
-              My public work moves between Android apps, browser tools, terminal
-              utilities, and interface themes. I care about clear interactions,
-              thoughtful defaults, and making things that people can explore for
-              themselves.
+              I use Kotlin, TypeScript, Python, Rust, and Go. The code for these
+              projects is on GitHub, along with setup instructions and release
+              downloads where available.
             </p>
           </div>
-          <ul className="principles">
-            <li>Build with purpose</li>
-            <li>Keep it usable</li>
-            <li>Share the work</li>
-          </ul>
         </section>
         <section
           className="contact container"
@@ -106,8 +94,8 @@ export default function App() {
         >
           <div className="contact-inner">
             <div>
-              <h2 id="contact-heading">Have something in mind?</h2>
-              <p>Let’s talk about it.</p>
+              <h2 id="contact-heading">Contact</h2>
+              <p>You can reach me on LinkedIn.</p>
             </div>
             <a
               className="button"
@@ -121,7 +109,7 @@ export default function App() {
         </section>
       </main>
       <footer className="footer container">
-        <p>Built with curiosity. © 2026 V Keerthi Vikram</p>
+        <p>© 2026 V Keerthi Vikram</p>
         <div className="footer-links">
           <a href={github} target="_blank" rel="noreferrer">
             <GithubLogo size={18} aria-hidden />

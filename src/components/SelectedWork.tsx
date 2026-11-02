@@ -32,17 +32,16 @@ export default function SelectedWork() {
       aria-labelledby="work-heading"
     >
       <div className="section-heading">
-        <h2 id="work-heading">Selected work</h2>
-        <p>A few things I’ve built.</p>
+        <h2 id="work-heading">Selected projects</h2>
       </div>
       <article className="featured-project">
         <div className="featured-copy">
           <p className="project-index">01 / Android app</p>
           <h3>Ballnote</h3>
-          <p className="project-tagline">Less scorekeeping. More cricket.</p>
+          <p className="project-tagline">Offline cricket scoring for Android.</p>
           <p className="project-description">
-            An offline cricket scorer for the matches that happen outside a
-            stadium.
+            Score turf matches, correct deliveries, and run a series or
+            tournament. Match data stays on your phone.
           </p>
           <ul className="feature-list">
             <li>Ball-by-ball scoring</li>
@@ -52,7 +51,7 @@ export default function SelectedWork() {
           <Tags items={["Kotlin", "Jetpack Compose", "Room"]} />
           <div className="project-links">
             <SourceLink href="https://github.com/vkeerthivikram/Ballnote">
-              View project
+              View source
             </SourceLink>
             <SourceLink href="https://github.com/vkeerthivikram/Ballnote/releases/latest">
               Download APK
@@ -76,7 +75,7 @@ export default function SelectedWork() {
               loading="lazy"
             />
           </div>
-          <figcaption>Real app screens · Light & dark</figcaption>
+          <figcaption>Ballnote in light and dark mode</figcaption>
         </figure>
       </article>
       <div className="project-pair">
@@ -86,7 +85,7 @@ export default function SelectedWork() {
             href="https://github.com/vkeerthivikram/Taskly"
             target="_blank"
             rel="noreferrer"
-            aria-label="Explore Taskly on GitHub"
+            aria-label="View Taskly on GitHub"
           >
             <img
               src="/images/taskly-desktop.webp"
@@ -98,14 +97,14 @@ export default function SelectedWork() {
           </a>
           <p className="project-index">02 / Web app</p>
           <h3>Taskly</h3>
-          <p className="project-tagline">A calmer home for everything to do.</p>
+          <p className="project-tagline">A task manager in one HTML file.</p>
           <p className="project-description">
-            An offline task manager with board, list, and calendar views. One
-            HTML file. No account needed.
+            Open it in your browser to manage tasks in board, list, or calendar
+            views. Works offline and saves your data in the browser.
           </p>
           <Tags items={["HTML", "CSS", "JavaScript"]} />
           <SourceLink href="https://github.com/vkeerthivikram/Taskly">
-            View project
+            View source
           </SourceLink>
         </article>
         <article className="project-card">
@@ -114,7 +113,7 @@ export default function SelectedWork() {
             href="https://kilo-models.vkvikram.com"
             target="_blank"
             rel="noreferrer"
-            aria-label="Explore the Kilo Models website"
+            aria-label="Visit Kilo Models"
           >
             <img
               src="/images/kilo-models-launch.webp"
@@ -126,10 +125,10 @@ export default function SelectedWork() {
           </a>
           <p className="project-index">03 / Developer tool</p>
           <h3>Kilo Models</h3>
-          <p className="project-tagline">Find the model that fits.</p>
+          <p className="project-tagline">An AI model directory for Kilo Gateway.</p>
           <p className="project-description">
-            Compare AI models, capabilities, and estimated costs in one place.
-            An independent, unofficial Kilo directory.
+            Compare model capabilities and pricing, then estimate costs for a
+            workload. An unofficial project.
           </p>
           <Tags items={["Next.js", "TypeScript", "React"]} />
           <div className="project-links">
