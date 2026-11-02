@@ -7,6 +7,7 @@ import {
 } from "./components/icons";
 import SelectedWork from "./components/SelectedWork";
 import ProjectArchive from "./components/ProjectArchive";
+import ThemeToggle from "./components/ThemeToggle";
 
 const github = "https://github.com/vkeerthivikram";
 const linkedin = "https://www.linkedin.com/in/v-keerthi-vikram/";
@@ -18,13 +19,6 @@ export default function App() {
         Skip to content
       </a>
       <header className="header container" id="top">
-        <a
-          className="wordmark"
-          href="#top"
-          aria-label="vkv. — V Keerthi Vikram, home"
-        >
-          vkv<span>.</span>
-        </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href="#projects">All projects</a>
@@ -32,6 +26,7 @@ export default function App() {
           <a className="nav-contact" href="#contact">
             Let’s talk <ArrowUpRight aria-hidden size={18} />
           </a>
+          <ThemeToggle />
         </nav>
       </header>
       <main id="main">
@@ -66,7 +61,7 @@ export default function App() {
             <img
               className="hero-art"
               src="/images/building-blocks.webp"
-              alt="Sculptural ivory building blocks with a translucent green glass pane"
+              alt="Sculptural building blocks with a translucent green glass pane"
               width="1200"
               height="900"
               fetchPriority="high"
@@ -126,13 +121,6 @@ export default function App() {
         </section>
       </main>
       <footer className="footer container">
-        <a
-          className="wordmark"
-          href="#top"
-          aria-label="vkv. — V Keerthi Vikram, back to top"
-        >
-          vkv<span>.</span>
-        </a>
         <p>Built with curiosity. © 2026 V Keerthi Vikram</p>
         <div className="footer-links">
           <a href={github} target="_blank" rel="noreferrer">

@@ -30,3 +30,7 @@ Production suite: 15 passed, one intentionally skipped duplicate mobile viewport
 Lighthouse on the optimized production preview: Performance 99, Accessibility 100, Best practices 100, SEO 100; LCP 2.1 seconds and CLS 0. These are local lab measurements, not field-user guarantees. Development-server measurements were excluded because development dependencies and source maps are not representative of the deployed bundle.
 
 Production build and TypeScript checks passed. Direct icon imports reduced build traversal from 4,562 modules to 40. No credentials or private contact information are included.
+
+## Dark-mode follow-up
+
+The user requested dark mode and removal of the initials wordmark. The updated production suite passes 23 tests with one duplicate viewport test skipped. Desktop and mobile verify system defaults, keyboard theme toggling, remembered choice across reloads and OS preference changes, no visible wordmark, and zero accessibility violations in light/dark page, expanded archive, and dialog states. Original composition and project content are preserved; the removed marks and new control are explicit user-requested changes to the earlier concept.

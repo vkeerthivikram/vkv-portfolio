@@ -21,7 +21,22 @@
     />
     <meta property="og:image" content="/images/social-card.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (() => {
+        let theme;
+        try {
+          theme = localStorage.getItem("portfolio-theme");
+        } catch {}
+        if (theme !== "light" && theme !== "dark")
+          theme = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === "dark" ? "#111a15" : "#28644a";
+      })();
+    </script>
     <link rel="preload" as="image" href="/images/building-blocks.webp" />
     <script type="application/ld+json">
       {

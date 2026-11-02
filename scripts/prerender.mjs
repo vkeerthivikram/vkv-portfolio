@@ -16,12 +16,23 @@ try {
   const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
   if (productionHost && /^[a-z0-9.-]+$/i.test(productionHost)) {
     const origin = `https://${productionHost}`;
-    html = html.replace(
-      'content="/images/social-card.png"',
-      `content="${origin}/images/social-card.png"`,
-    ).replace('</head>', `<link rel="canonical" href="${origin}/" /><meta property="og:url" content="${origin}/" /></head>`);
-    await writeFile('dist/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${origin}/</loc></url></urlset>`);
-    await writeFile('dist/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
+    html = html
+      .replace(
+        'content="/images/social-card.png"',
+        `content="${origin}/images/social-card.png"`,
+      )
+      .replace(
+        "</head>",
+        `<link rel="canonical" href="${origin}/" /><meta property="og:url" content="${origin}/" /></head>`,
+      );
+    await writeFile(
+      "dist/sitemap.xml",
+      `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${origin}/</loc></url></urlset>`,
+    );
+    await writeFile(
+      "dist/robots.txt",
+      `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`,
+    );
   }
   await writeFile(
     "dist/index.html",

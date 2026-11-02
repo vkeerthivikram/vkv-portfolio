@@ -43,7 +43,7 @@
 .archive-filters button {
   min-height: 42px;
   padding: 9px 19px;
-  border: 1px solid #c7cec9;
+  border: 1px solid var(--control-border);
   border-radius: 7px;
   background: transparent;
   color: var(--ink);
@@ -65,7 +65,7 @@
 .archive-filters button[aria-pressed="true"] {
   background: var(--green);
   border-color: var(--green);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .archive-search {
@@ -76,7 +76,7 @@
   gap: 11px;
   min-height: 44px;
   padding: 0 15px;
-  border: 1px solid #c7cec9;
+  border: 1px solid var(--control-border);
   border-radius: 7px;
   color: var(--muted);
 }
@@ -141,7 +141,7 @@
 }
 
 .archive-project:hover {
-  background: #f4f7f4;
+  background: var(--row-hover);
 }
 .archive-project-copy {
   display: grid;
@@ -163,7 +163,7 @@
   padding: 5px 13px;
   border-radius: 7px;
   background: var(--sage);
-  color: #27533d;
+  color: var(--green);
   font-size: 14px;
   font-weight: 450;
   line-height: 1.4;
@@ -255,7 +255,7 @@
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: #fff;
+  background: var(--background);
   color: var(--ink);
   box-shadow: 0 24px 100px #12281b26;
   overscroll-behavior: contain;
@@ -279,7 +279,7 @@
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: #fff;
+  background: var(--background);
   color: var(--ink);
   cursor: pointer;
 }
@@ -320,7 +320,7 @@
   padding: 6px 11px;
   border-radius: 5px;
   background: var(--sage);
-  color: #27533d;
+  color: var(--green);
   font-size: 12px;
   font-weight: 500;
   line-height: 1.4;
@@ -379,14 +379,14 @@
 }
 .project-dialog-primary {
   background: var(--green);
-  color: #fff;
+  color: var(--on-accent);
 }
 .project-dialog-primary:hover {
-  background: #1d5039;
+  background: var(--accent-hover);
 }
 .project-dialog-links .project-dialog-secondary {
   border-color: var(--line);
-  background: #fff;
+  background: var(--background);
   color: var(--green);
 }
 .project-dialog-secondary:hover {

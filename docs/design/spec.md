@@ -30,4 +30,10 @@ Hero allowed copy: vkv.; Work; All projects; About; Let’s talk; Curiosity in. 
 - Project detail dialogs, result counts and empty state are required for showing complete project context without making the landing page excessively long.
 - Featured source/release/website links added for useful next actions; Kilo attribution explicitly unofficial.
 - The work-section concept supersedes the hero overview’s incidental three preview tiles.
-- Reduced motion disables animation. No theme toggle because the chosen white design is the deliberate visual system.
+- Reduced motion disables animation.
+
+## Requested theme update
+
+Vicky requested dark mode and removal of the vkv wordmarks after viewing the first deployment. Header and footer initials are removed, and the favicon uses abstract blocks with no lettering. A 44px sun/moon button switches theme, remembers an explicit choice locally, and otherwise follows the system preference. The document theme is set before rendering to avoid a light-background flash.
+
+Dark tokens: background #111a15, text #e8eee9, accent #aad7b8, sage surface #23352a. Every section, dialog, selected control, and focus state follows the palette. Real project screenshots retain their genuine colors. The hero receives a matching dark studio-art variant at public/images/building-blocks-dark.webp, generated with the built-in Image Gen editing tool from the original standalone asset.

@@ -3,19 +3,65 @@
 :root {
   font-family: "Geist Variable", Arial, sans-serif;
   color: var(--ink);
-  background: #fff;
+  background: var(--background);
+  color-scheme: light;
+  --background: #fff;
   --ink: #18251e;
   --muted: #66716b;
   --green: #28644a;
   --line: #dde2de;
   --sage: #e9f0e9;
+  --body-text: #48534c;
+  --on-ink: #fff;
+  --on-accent: #fff;
+  --accent-hover: #1d5039;
+  --control-border: #c7cec9;
+  --row-hover: #f4f7f4;
+  --project-panel: #e5eee6;
+  --image-matte: #e8e5df;
+  --panel-muted: #536559;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   --radius: 8px;
 }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #111a15;
+  --ink: #e8eee9;
+  --muted: #a7b6ac;
+  --green: #aad7b8;
+  --line: #34443a;
+  --sage: #23352a;
+  --body-text: #bdc9c0;
+  --on-ink: #111a15;
+  --on-accent: #112619;
+  --accent-hover: #c5e5ce;
+  --control-border: #587060;
+  --row-hover: #1b2b20;
+  --project-panel: #23352a;
+  --image-matte: #29362d;
+  --panel-muted: #b1c0b5;
+}
+:root[data-theme="dark"] .hero-art {
+  content: url('/images/building-blocks-dark.webp');
+}
 * {
   box-sizing: border-box;
+}
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--background);
+}
+.theme-toggle:hover {
+  background: var(--sage);
 }
 body {
   margin: 0;
@@ -60,7 +106,7 @@ ul {
   color: #18251e;
 }
 :focus-visible {
-  outline: 3px solid #28644a;
+  outline: 3px solid var(--green);
   outline-offset: 5px;
 }
 .container {
@@ -73,7 +119,7 @@ ul {
   top: 12px;
   left: 12px;
   background: var(--ink);
-  color: white;
+  color: var(--on-ink);
   padding: 14px;
   transform: translateY(-160%);
   z-index: 10;
@@ -84,18 +130,10 @@ ul {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-block: 30px;
 }
-.wordmark {
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 800;
-  letter-spacing: -3px;
-}
-.wordmark span {
-  color: var(--green);
-}
+
 .header nav {
   display: flex;
   gap: 42px;
@@ -149,7 +187,7 @@ ul {
   justify-content: center;
   gap: 16px;
   background: var(--ink);
-  color: white;
+  color: var(--on-ink);
   border: 1px solid var(--ink);
   border-radius: var(--radius);
   padding: 17px 25px;
@@ -162,6 +200,7 @@ ul {
 }
 .button:hover {
   background: var(--green);
+  color: var(--on-accent);
   border-color: var(--green);
   transform: translateY(-2px);
 }
@@ -241,7 +280,7 @@ h2 {
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: -0.015em;
-  color: #48534c;
+  color: var(--body-text);
   margin-top: 17px;
   max-width: 540px;
 }
@@ -271,7 +310,7 @@ h2 {
 }
 .tags li {
   background: var(--sage);
-  color: #24563f;
+  color: var(--green);
   padding: 6px 12px;
   border-radius: 30px;
   font-size: 13px;
@@ -297,7 +336,7 @@ h2 {
   border-color: var(--ink);
 }
 .ballnote-visual {
-  background: #e5eee6;
+  background: var(--project-panel);
   padding: 36px 40px 18px;
   border-radius: var(--radius);
 }
@@ -317,7 +356,7 @@ h2 {
 .ballnote-visual figcaption {
   text-align: center;
   font-size: 12px;
-  color: #536559;
+  color: var(--panel-muted);
   margin-top: 18px;
 }
 .project-pair {
@@ -336,7 +375,7 @@ h2 {
   margin-bottom: 28px;
 }
 .taskly-visual {
-  background: #e8e5df;
+  background: var(--image-matte);
   padding: 30px;
 }
 .taskly-visual img {
@@ -386,7 +425,7 @@ h2 {
   font-size: 18px;
   line-height: 1.65;
   letter-spacing: -0.015em;
-  color: #48534c;
+  color: var(--body-text);
 }
 .about-copy .lead {
   font-size: 23px;
@@ -438,10 +477,7 @@ h2 {
   border-top: 1px solid var(--line);
   padding-block: 30px 36px;
 }
-.footer .wordmark {
-  font-size: 34px;
-  letter-spacing: -2px;
-}
+
 .footer p {
   color: var(--muted);
   font-size: 12px;
@@ -457,7 +493,7 @@ h2 {
   align-items: center;
 }
 .contact p {
-  color: #5b675f;
+  color: var(--panel-muted);
 }
 .taskly-visual img {
   width: 100%;
@@ -544,9 +580,6 @@ h2 {
   .contact-inner {
     padding: 32px;
   }
-  .footer p {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
   .container {
@@ -555,9 +588,7 @@ h2 {
   .header {
     padding-block: 24px;
   }
-  .wordmark {
-    font-size: 38px;
-  }
+
   .header nav {
     gap: 20px;
     font-size: 13px;

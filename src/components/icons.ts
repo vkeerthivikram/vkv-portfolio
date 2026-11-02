@@ -7,3 +7,5 @@ export { GithubLogo } from "@phosphor-icons/react/dist/csr/GithubLogo";
 export { LinkedinLogo } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
 export { MagnifyingGlass } from "@phosphor-icons/react/dist/csr/MagnifyingGlass";
 export { X } from "@phosphor-icons/react/dist/csr/X";
+export { Moon } from "@phosphor-icons/react/dist/csr/Moon";
+export { Sun } from "@phosphor-icons/react/dist/csr/Sun";
